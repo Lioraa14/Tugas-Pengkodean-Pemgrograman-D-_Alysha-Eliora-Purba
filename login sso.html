@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSO Universitas Diponegoro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: url('e7dab690-3c1f-4030-9c46-6b73e557a321.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .login-box img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .login-box h2 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .login-box p {
+            margin-bottom: 15px;
+        }
+        .login-box input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .login-box .btn-login {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .login-box .btn-reset {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .login-box a {
+            color: #1877f2;
+            text-decoration: none;
+            display: block;
+            margin-top: 5px;
+        }
+        .login-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/7/7a/Lambang_Universitas_Diponegoro.svg/1200px-Lambang_Universitas_Diponegoro.svg.png" alt="Logo Undip">
+        <h2>Single Sign On (SSO)</h2>
+        <p>Universitas Diponegoro</p>
+        <input type="text" placeholder="NIM/NIP/username/e-mail official Undip">
+        <button class="btn-login">Login</button>
+        <button class="btn-reset">Reset Password</button>
+        <a href="#">Daftar sekarang!</a>
+        <a href="#">Pendaftaran alumni klik disini</a>
+    </div>
+</body>
+</html>
