@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Inventory Dashboard</h2>
+
+    <form id="addForm" method="post" action="process.php">
+        <input type="hidden" name="action" value="add">
+        <input type="text" name="name" placeholder="Item Name" required>
+        <input type="number" name="quantity" placeholder="Quantity" required>
+        <input type="number" name="price" placeholder="Price" required>
+        <button type="submit">Add Item</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th><th>Quantity</th><th>Price</th><th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            include 'db.php';
+            $result = $conn->query("SELECT * FROM items");
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>
+                    <td>{$row['name']}</td>
+                    <td>{$row['quantity']}</td>
+                    <td>{$row['price']}</td>
+                    <td>
+                        <form class='deleteForm' method='post' action='process.php'>
+                            <input type='hidden' name='action' value='delete'>
+                            <input type='hidden' name='id' value='{$row['id']}'>
+                            <button type='submit'>Delete</button>
+                        </form>
+                    </td>
+                </tr>";
+            }
+            ?>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
