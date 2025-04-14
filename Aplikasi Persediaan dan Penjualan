@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventaris & Penjualan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffeef2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff0f4;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 144, 171, 0.4);
+    }
+
+    h1 {
+      text-align: center;
+      color: #d63384;
+      margin-bottom: 30px;
+    }
+
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"], input[type="number"] {
+      padding: 12px;
+      border: 1px solid #ffb6c1;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      border: 1px solid #ffdce5;
+      padding: 14px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ffc0cb;
+      color: #6d004f;
+    }
+
+    .tabel-title {
+      font-weight: bold;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #d63384;
+    }
+
+    .action-button {
+      background-color: #ff85a2;
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 0.9rem;
+      border: none;
+    }
+
+    .action-button:hover {
+      background-color: #e8436b;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Manajemen Inventaris & Transaksi</h1>
+
+    <div class="form-section">
+      <input type="text" placeholder="Nama Produk Baru">
+      <input type="number" placeholder="Jumlah Stok">
+      <button>+ Tambah ke Inventaris</button>
+    </div>
+
+    <div class="tabel-title">Inventaris Barang</div>
+    <table>
+      <tr>
+        <th>Kode</th>
+        <th>Nama Barang</th>
+        <th>Stok</th>
+        <th>Harga (Rp)</th>
+        <th>Aksi</th>
+      </tr>
+      <tr>
+        <td>BRG101</td>
+        <td>Latte</td>
+        <td>15</td>
+        <td>25.000</td>
+        <td><button class="action-button">Jual</button></td>
+      </tr>
+      <tr>
+        <td>BRG102</td>
+        <td>Espresso</td>
+        <td>20</td>
+        <td>18.000</td>
+        <td><button class="action-button">Jual</button></td>
+      </tr>
+      <tr>
+        <td>BRG103</td>
+        <td>Matcha</td>
+        <td>10</td>
+        <td>30.000</td>
+        <td><button class="action-button">Jual</button></td>
+      </tr>
+    </table>
+
+    <div class="tabel-title">Riwayat Transaksi Hari Ini</div>
+    <table>
+      <tr>
+        <th>Waktu</th>
+        <th>Barang</th>
+        <th>Jumlah</th>
+        <th>Total Harga (Rp)</th>
+        <th>Kasir</th>
+      </tr>
+      <tr>
+        <td>13/04/2025 08:20</td>
+        <td>Latte</td>
+        <td>2</td>
+        <td>50.000</td>
+        <td>Andi</td>
+      </tr>
+      <tr>
+        <td>13/04/2025 09:10</td>
+        <td>Espresso</td>
+        <td>1</td>
+        <td>18.000</td>
+        <td>Sari</td>
+      </tr>
+      <tr>
+        <td>13/04/2025 10:45</td>
+        <td>Matcha</td>
+        <td>1</td>
+        <td>30.000</td>
+        <td>Riko</td>
+      </tr>
+    </table>
+
+    <div class="tabel-title">Ringkasan Penjualan</div>
+    <table>
+      <tr>
+        <th>Total Barang Terjual</th>
+        <th>Total Pendapatan (Rp)</th>
+        <th>Transaksi Berhasil</th>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>98.000</td>
+        <td>3</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
